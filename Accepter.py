@@ -7,18 +7,16 @@ import random
 import discord
 from discord.ext.commands import Bot
 
-#DOTA SLAVE TOKEN
-#NDYxNzY1Mzk3NjQxODIyMjA4.DhYEDw.fTTrsODDTBWfndMhsPnTCH5CsWo
+
 PREFIX = '!'
 client = Bot(command_prefix = PREFIX)
-TOKEN = 'NDYxNzY1Mzk3NjQxODIyMjA4.DhYEDw.fTTrsODDTBWfndMhsPnTCH5CsWo'
+TOKEN = 'CHANGE FOR YOUR OWN BOT'
 
 
 
 
 #Looks for the dota 2 accept button every 5 seconds
 #if it finds it, it will log, move the cursor and accept for the user
-#has a random number generator for spite purposes
 
 
 def acceptQueue():
@@ -33,19 +31,6 @@ def acceptQueue():
 		pyautogui.click(button='left')
 
 
-#Going to use discord api in python that will send a Private message
-#to a user after they enter in their specified user, i will have to think
-#more about how this would work since we can't have one bot per person
-#:thinking:
-#regardless just a thought, cheaper than twilio and we can run the bot
-#on the raspberry pi
-#THIS FUNCTION IS NOT FINISHED YET, STILL IN DEV
-
-@client.command()
-async def notify():
-	print('in notify')
-	test = 'bothehobo#3312'
-	await client.send_message(test, 'jeff')
 
 def main():
 	acceptQueue()
